@@ -1,0 +1,18 @@
+{
+  "name": "serverless-cf-template-size",
+  "version": "1.0.0",
+  "description": "Serverless plugin that prints the number of resources in the generated CloudFormation template and warns if your project is close to the max 200 resource limit",
+  "author": "Brian Winant",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bwinant/serverless-cf-template-size"
+  },
+  "keywords": [
+    "serverless cloudformation template invalid number of resources is greater than maximum allowed",
+    "serverless cloudformation",
+    "serverless plugin"
+  ],
+  "bugs": "https://github.com/bwinant/serverless-cf-template-size/issues",
+  "homepage": "https://github.com/bwinant/serverless-cf-template-size#readme"
+}
