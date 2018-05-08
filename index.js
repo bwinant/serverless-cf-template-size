@@ -36,8 +36,11 @@ class CloudFormationTemplateSize {
 
         // https://serverless.com/blog/serverless-workaround-cloudformation-200-resource-limit/
         // A single function requires at least 4 resources, so warn if at 190 or more
-        if (MAX_RESOURCES - count <= 10) {
-            this.serverless.cli.log('WARNING! Getting close to ' + MAX_RESOURCES + ' resource limit');
+        if (count > MAX_RESOURCES) {
+            this.serverless.cli.log('WARNING! This deployment will fail as it is over the CloudFormation resource limit!');
+        }
+        else if (MAX_RESOURCES - count <= 10) {
+            this.serverless.cli.log('WARNING! Getting close to the CloudFormation ' + MAX_RESOURCES + ' resource limit');
         }
     }
 }
